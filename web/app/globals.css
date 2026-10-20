@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fbfaf8;
+  --color-ink: #1f1d1c;
+  --color-mute: #6d6864;
+  --color-line: #e7e3df;
+  --color-well: #f3f0ec;
+  --color-rose: #9e2f52;
+  --color-rosebg: #f8e9ee;
+  --color-ok: #2f6b4f;
+  --color-okbg: #e6f1ea;
+  --color-warn: #a4561a;
+  --color-warnbg: #fbeee2;
+  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif4), Georgia, serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+mark.quote {
+  background: #f6d9a8;
+  color: inherit;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px #f6d9a8;
+}
+
+mark.closest {
+  background: transparent;
+  color: inherit;
+  text-decoration: underline wavy var(--color-warn);
+  text-underline-offset: 3px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(4px); }
+}
+
+.rise { animation: rise .3s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+}
